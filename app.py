@@ -1,9 +1,11 @@
+import sys, os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 """Panama load-forecast dashboard (Streamlit).  Run:  streamlit run app.py
 Tabs: Forecast viewer | Upload & predict | Model evaluation | Explainability."""
 import json, io
 import joblib, numpy as np, pandas as pd, plotly.graph_objects as go, streamlit as st
-from src.data import FEATURES, TARGET
-from src.metrics import summary
+from data import FEATURES, TARGET
+from metrics import summary
 
 st.set_page_config(page_title='Panama Load Forecast', layout='wide')
 COLORS = {'CND': '#B4452F', 'XGBoost_paper': '#0F766E', 'XGBoost': '#5AA9A2', 'XGBoost_tuned': '#2DA39A', 'LSTM': '#B7791F', 'LinearRegression': '#6B7280', 'Persistence(wk-2)': '#A3A3A3'}
