@@ -1,0 +1,297 @@
+{
+  "overall": {
+    "CND (official)": {
+      "MAPE": 4.952,
+      "MAE": 59.197,
+      "RMSE": 74.029
+    },
+    "Persistence (2 wks ago)": {
+      "MAPE": 5.845,
+      "MAE": 71.643,
+      "RMSE": 104.143
+    },
+    "Linear Regression": {
+      "MAPE": 4.48,
+      "MAE": 53.2,
+      "RMSE": 71.738
+    },
+    "XGBoost (published settings)": {
+      "MAPE": 3.831,
+      "MAE": 46.184,
+      "RMSE": 57.642
+    },
+    "XGBoost (hand-set)": {
+      "MAPE": 3.837,
+      "MAE": 46.254,
+      "RMSE": 57.721
+    },
+    "XGBoost (Optuna-tuned)": {
+      "MAPE": 3.918,
+      "MAE": 46.977,
+      "RMSE": 58.624
+    },
+    "LSTM": {
+      "MAPE": 4.464,
+      "MAE": 53.396,
+      "RMSE": 69.263
+    }
+  },
+  "segments": {
+    "COVID-affected weeks": {
+      "CND (official)": {
+        "MAPE": 7.01,
+        "MAE": 74.65,
+        "RMSE": 92.71
+      },
+      "Persistence (2 wks ago)": {
+        "MAPE": 5.29,
+        "MAE": 57.18,
+        "RMSE": 69.61
+      },
+      "Linear Regression": {
+        "MAPE": 5.35,
+        "MAE": 57.16,
+        "RMSE": 70.5
+      },
+      "XGBoost (published settings)": {
+        "MAPE": 5.1,
+        "MAE": 55.02,
+        "RMSE": 67.5
+      },
+      "XGBoost (hand-set)": {
+        "MAPE": 5.21,
+        "MAE": 56.18,
+        "RMSE": 68.54
+      },
+      "XGBoost (Optuna-tuned)": {
+        "MAPE": 5.12,
+        "MAE": 55.26,
+        "RMSE": 67.71
+      },
+      "LSTM": {
+        "MAPE": 8.52,
+        "MAE": 89.5,
+        "RMSE": 108.35
+      }
+    },
+    "Ordinary hours": {
+      "CND (official)": {
+        "MAPE": 4.33,
+        "MAE": 54.1,
+        "RMSE": 67.29
+      },
+      "Persistence (2 wks ago)": {
+        "MAPE": 5.12,
+        "MAE": 65.6,
+        "RMSE": 92.99
+      },
+      "Linear Regression": {
+        "MAPE": 3.67,
+        "MAE": 45.69,
+        "RMSE": 57.5
+      },
+      "XGBoost (published settings)": {
+        "MAPE": 3.5,
+        "MAE": 43.75,
+        "RMSE": 54.54
+      },
+      "XGBoost (hand-set)": {
+        "MAPE": 3.46,
+        "MAE": 43.33,
+        "RMSE": 54.28
+      },
+      "XGBoost (Optuna-tuned)": {
+        "MAPE": 3.53,
+        "MAE": 43.79,
+        "RMSE": 54.59
+      },
+      "LSTM": {
+        "MAPE": 3.59,
+        "MAE": 45.5,
+        "RMSE": 57.2
+      }
+    },
+    "Public-holiday hours": {
+      "CND (official)": {
+        "MAPE": 7.27,
+        "MAE": 80.43,
+        "RMSE": 95.16
+      },
+      "Persistence (2 wks ago)": {
+        "MAPE": 13.61,
+        "MAE": 153.86,
+        "RMSE": 205.08
+      },
+      "Linear Regression": {
+        "MAPE": 10.6,
+        "MAE": 117.2,
+        "RMSE": 151.11
+      },
+      "XGBoost (published settings)": {
+        "MAPE": 4.74,
+        "MAE": 53.8,
+        "RMSE": 66.76
+      },
+      "XGBoost (hand-set)": {
+        "MAPE": 4.97,
+        "MAE": 56.59,
+        "RMSE": 67.81
+      },
+      "XGBoost (Optuna-tuned)": {
+        "MAPE": 5.51,
+        "MAE": 62.65,
+        "RMSE": 75.87
+      },
+      "LSTM": {
+        "MAPE": 5.67,
+        "MAE": 65.08,
+        "RMSE": 84.35
+      }
+    }
+  },
+  "segment_hours": {
+    "Ordinary hours": 1823,
+    "COVID-affected weeks": 336,
+    "Public-holiday hours": 193
+  },
+  "folds_better_than_CND": {
+    "Persistence (2 wks ago)": 6,
+    "Linear Regression": 10,
+    "XGBoost (published settings)": 14,
+    "XGBoost (hand-set)": 13,
+    "XGBoost (Optuna-tuned)": 13,
+    "LSTM": 10
+  },
+  "perfold_MAPE": {
+    "Week 15, Apr 2019": {
+      "CND (official)": 3.9,
+      "Persistence (2 wks ago)": 6.15,
+      "Linear Regression": 4.98,
+      "XGBoost (published settings)": 3.82,
+      "XGBoost (hand-set)": 3.82,
+      "XGBoost (Optuna-tuned)": 3.89,
+      "LSTM": 5.1
+    },
+    "Week 21, May 2019": {
+      "CND (official)": 3.1,
+      "Persistence (2 wks ago)": 2.85,
+      "Linear Regression": 2.68,
+      "XGBoost (published settings)": 2.5,
+      "XGBoost (hand-set)": 2.42,
+      "XGBoost (Optuna-tuned)": 2.73,
+      "LSTM": 3.73
+    },
+    "Week 24, Jun 2019": {
+      "CND (official)": 6.08,
+      "Persistence (2 wks ago)": 7.75,
+      "Linear Regression": 5.64,
+      "XGBoost (published settings)": 5.93,
+      "XGBoost (hand-set)": 5.75,
+      "XGBoost (Optuna-tuned)": 5.56,
+      "LSTM": 5.55
+    },
+    "Week 29, Jul 2019": {
+      "CND (official)": 5.55,
+      "Persistence (2 wks ago)": 4.75,
+      "Linear Regression": 4.69,
+      "XGBoost (published settings)": 3.76,
+      "XGBoost (hand-set)": 3.75,
+      "XGBoost (Optuna-tuned)": 3.99,
+      "LSTM": 4.36
+    },
+    "Week 33, Aug 2019": {
+      "CND (official)": 4.16,
+      "Persistence (2 wks ago)": 3.46,
+      "Linear Regression": 3.7,
+      "XGBoost (published settings)": 3.58,
+      "XGBoost (hand-set)": 3.67,
+      "XGBoost (Optuna-tuned)": 3.66,
+      "LSTM": 3.27
+    },
+    "Week 37, Sep 2019": {
+      "CND (official)": 4.68,
+      "Persistence (2 wks ago)": 3.19,
+      "Linear Regression": 3.64,
+      "XGBoost (published settings)": 3.25,
+      "XGBoost (hand-set)": 3.26,
+      "XGBoost (Optuna-tuned)": 3.5,
+      "LSTM": 3.5
+    },
+    "Week 41, Oct 2019": {
+      "CND (official)": 5.04,
+      "Persistence (2 wks ago)": 5.29,
+      "Linear Regression": 3.78,
+      "XGBoost (published settings)": 3.07,
+      "XGBoost (hand-set)": 3.06,
+      "XGBoost (Optuna-tuned)": 3.3,
+      "LSTM": 3.33
+    },
+    "Week 44, Nov 2019": {
+      "CND (official)": 6.65,
+      "Persistence (2 wks ago)": 6.69,
+      "Linear Regression": 6.89,
+      "XGBoost (published settings)": 4.27,
+      "XGBoost (hand-set)": 4.21,
+      "XGBoost (Optuna-tuned)": 4.63,
+      "LSTM": 3.99
+    },
+    "Week 51, Dec 2019": {
+      "CND (official)": 5.38,
+      "Persistence (2 wks ago)": 8.8,
+      "Linear Regression": 6.04,
+      "XGBoost (published settings)": 4.09,
+      "XGBoost (hand-set)": 3.97,
+      "XGBoost (Optuna-tuned)": 3.79,
+      "LSTM": 4.14
+    },
+    "Week 01, Jan 2020": {
+      "CND (official)": 4.06,
+      "Persistence (2 wks ago)": 7.17,
+      "Linear Regression": 4.92,
+      "XGBoost (published settings)": 3.8,
+      "XGBoost (hand-set)": 4.15,
+      "XGBoost (Optuna-tuned)": 4.42,
+      "LSTM": 2.76
+    },
+    "Week 06, Feb 2020": {
+      "CND (official)": 3.79,
+      "Persistence (2 wks ago)": 5.32,
+      "Linear Regression": 2.4,
+      "XGBoost (published settings)": 3.15,
+      "XGBoost (hand-set)": 3.21,
+      "XGBoost (Optuna-tuned)": 2.81,
+      "LSTM": 2.85
+    },
+    "Week 10, Mar 2020": {
+      "CND (official)": 2.93,
+      "Persistence (2 wks ago)": 9.81,
+      "Linear Regression": 2.67,
+      "XGBoost (published settings)": 2.2,
+      "XGBoost (hand-set)": 2.02,
+      "XGBoost (Optuna-tuned)": 2.32,
+      "LSTM": 2.85
+    },
+    "Week 20, May 2020": {
+      "CND (official)": 9.06,
+      "Persistence (2 wks ago)": 6.01,
+      "Linear Regression": 6.45,
+      "XGBoost (published settings)": 6.16,
+      "XGBoost (hand-set)": 6.28,
+      "XGBoost (Optuna-tuned)": 6.14,
+      "LSTM": 10.03
+    },
+    "Week 24, Jun 2020": {
+      "CND (official)": 4.96,
+      "Persistence (2 wks ago)": 4.57,
+      "Linear Regression": 4.25,
+      "XGBoost (published settings)": 4.04,
+      "XGBoost (hand-set)": 4.14,
+      "XGBoost (Optuna-tuned)": 4.11,
+      "LSTM": 7.02
+    }
+  },
+  "covid_folds": [
+    "Week 20, May 2020",
+    "Week 24, Jun 2020"
+  ]
+}

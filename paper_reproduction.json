@@ -1,0 +1,98 @@
+{
+  "paper_cnd_weekly": [
+    3.9,
+    3.1,
+    6.08,
+    5.55,
+    4.16,
+    4.68,
+    5.04,
+    6.65,
+    5.38,
+    4.06,
+    3.79,
+    2.93,
+    9.06,
+    4.96
+  ],
+  "our_cnd_weekly": [
+    3.9,
+    3.1,
+    6.08,
+    5.55,
+    4.16,
+    4.68,
+    5.04,
+    6.65,
+    5.38,
+    4.06,
+    3.79,
+    2.93,
+    9.06,
+    4.96
+  ],
+  "cnd_max_abs_diff_vs_paper": 0.004928024770686434,
+  "paper_xgb_avg_mape": 3.74,
+  "paperparams_xgb_avg_mape": 3.831380246754174,
+  "cnd_avg_mape": 4.952357523892247,
+  "weekly_xgb_mape": [
+    3.82,
+    2.5,
+    5.93,
+    3.76,
+    3.58,
+    3.25,
+    3.07,
+    4.27,
+    4.09,
+    3.8,
+    3.15,
+    2.2,
+    6.16,
+    4.04
+  ],
+  "weeks_xgb_beats_cnd": 14,
+  "pooled": {
+    "CND": {
+      "MAPE": 4.952357523892246,
+      "MAE": 59.19737325680272,
+      "RMSE": 74.02858973510108
+    },
+    "XGBoost_paper_params": {
+      "MAPE": 3.8313802467541738,
+      "MAE": 46.183734332067786,
+      "RMSE": 57.64153770734032
+    }
+  },
+  "secondary": {
+    "peak": {
+      "CND": 2.7504017691183122,
+      "XGBoost": 2.488203012285728
+    },
+    "valley": {
+      "CND": 4.491355101264542,
+      "XGBoost": 3.8136563225656284
+    },
+    "energy": {
+      "CND": 2.8066613727318455,
+      "XGBoost": 1.9032743533371375
+    }
+  },
+  "bias_mwh": {
+    "CND": 5.964975127551022,
+    "XGBoost": -6.198454942352918
+  },
+  "params": {
+    "n_estimators": 300,
+    "max_depth": 7,
+    "subsample": 0.7,
+    "colsample_bytree": 0.7,
+    "colsample_bylevel": 0.7,
+    "colsample_bynode": 0.7,
+    "learning_rate": 0.045,
+    "min_child_weight": 7,
+    "gamma": 15,
+    "random_state": 123,
+    "eval_metric": "rmse"
+  }
+}
