@@ -15,10 +15,10 @@ LABELS = {'CND': 'CND (official)', 'XGBoost_paper': 'XGBoost (published settings
 
 @st.cache_data
 def load():
-    P = pd.read_csv('results/predictions_final.csv', parse_dates=['datetime'])
-    F = pd.read_csv('results/shap_features.csv')
-    assert len(P) == len(F)  # same row order (fold by fold, hour by hour)
-    return P, F, json.load(open('results/summary.json')), pd.read_csv('results/shap_importance.csv', index_col=0).iloc[:, 0]
+    P = pd.read_csv('predictions_final.csv', parse_dates=['datetime'])
+    F = pd.read_csv('shap_features.csv')
+    assert len(P) == len(F)
+    return P, F, json.load(open('summary.json')), pd.read_csv('shap_importance.csv', index_col=0).iloc[:, 0]
 
 
 P, F, S, IMP = load()
@@ -56,7 +56,7 @@ with tab2:
         elif df[FEATURES].isna().any().any():
             st.error('Input contains missing values - please fill or remove those rows.')
         else:
-            model = joblib.load('results/xgb_published_settings_last_week.joblib')
+            model = joblib.load('xgb_published_settings_last_week.joblib')
             df['predicted_demand_MWh'] = model.predict(df[FEATURES]).round(2)
             x = df['datetime'] if 'datetime' in df.columns else df.index
             f2 = go.Figure(go.Scatter(x=x, y=df['predicted_demand_MWh'], name='Predicted', line=dict(color=COLORS['XGBoost_paper'])))
@@ -69,9 +69,12 @@ with tab3:
     st.caption(f"Weeks where each model beat CND: {S['folds_better_than_CND']}")
     seg = st.selectbox('Situation', list(S['segments'].keys()))
     st.write(f"{S['segment_hours'][seg]} hours"); st.dataframe(pd.DataFrame(S['segments'][seg]).T.round(2))
-    c1, c2 = st.columns(2); c1.image('figures/per_fold_mape.png'); c2.image('figures/segments.png')
+    c1, c2 = st.columns(2); c1.image('per_fold_mape.png'); c2.image('segments.png')
 
 with tab4:
+    st.subheader('What drives the XGBoost forecast (mean |SHAP|)')
+    c1, c2 = st.columns(2); c1.image('shap_importance.png'); c2.image('shap_beeswarm.png')
+    st.write(IMP.sort_values(ascending=False).round(2).to_frame('mean |SHAP| (MWh)'))
     st.subheader('What drives the XGBoost forecast (mean |SHAP|)')
     c1, c2 = st.columns(2); c1.image('figures/shap_importance.png'); c2.image('figures/shap_beeswarm.png')
     st.write(IMP.sort_values(ascending=False).round(2).to_frame('mean |SHAP| (MWh)'))
