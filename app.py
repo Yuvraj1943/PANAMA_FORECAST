@@ -1,6 +1,6 @@
 import sys, os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-"""Panama load-forecast dashboard (Streamlit).  Run:  streamlit run app.py
+"""Panama load-forecast dashboard (Streamlit). Run: streamlit run app.py
 Tabs: Forecast viewer | Upload & predict | Model evaluation | Explainability."""
 import json, io
 import joblib, numpy as np, pandas as pd, plotly.graph_objects as go, streamlit as st
@@ -74,7 +74,4 @@ with tab3:
 with tab4:
     st.subheader('What drives the XGBoost forecast (mean |SHAP|)')
     c1, c2 = st.columns(2); c1.image('shap_importance.png'); c2.image('shap_beeswarm.png')
-    st.write(IMP.sort_values(ascending=False).round(2).to_frame('mean |SHAP| (MWh)'))
-    st.subheader('What drives the XGBoost forecast (mean |SHAP|)')
-    c1, c2 = st.columns(2); c1.image('figures/shap_importance.png'); c2.image('figures/shap_beeswarm.png')
     st.write(IMP.sort_values(ascending=False).round(2).to_frame('mean |SHAP| (MWh)'))
